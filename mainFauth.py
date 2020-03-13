@@ -54,7 +54,7 @@ And to the list 'differencesList' the value in units of time of the two picks fo
 
 def Read_Two_Column_File(file_name):
     with open(file_name, 'r') as f_input:
-        csv_input = csv.reader(f_input, delimiter=", ", skipinitialspace=True)
+        csv_input = csv.reader(f_input, delimiter=",", skipinitialspace=True)
         x = []
         y = []
         for cols in csv_input:
@@ -64,7 +64,7 @@ def Read_Two_Column_File(file_name):
     return x, y
 
 
-differencesList, timeList = Read_Two_Column_File(FullData.csv)
+differencesList, timeList = Read_Two_Column_File('FullData.csv')
 
 initial = len(timeList)
 
